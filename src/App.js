@@ -1,22 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 
+constt book = {
+  title: 'A Farewell to Arms',
+  author: 'Earnest Hemingway',
+  published: '1929'
+  image: ''
+  width: '264'
+  height: '378'
+};
+
+function MagicButton (){
+  return (
+    <>
+    <h3>This is a magic button</h3>
+    <button>Magic</button>
+    </>
+  );
+}
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with Lauren
-        </a>
+       <MagicButton/>
       </header>
     </div>
   );
