@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
-constt book = {
+const book = {
   title: 'A Farewell to Arms',
   author: 'Earnest Hemingway',
-  published: '1929'
-  image: ''
-  width: '264'
+  published: '1929',
+  image: 'https://upload.wikimedia.org/wikipedia/en/4/48/Hemingway_farewell.png',
+  width: '264',
   height: '378'
 };
 
@@ -19,7 +19,24 @@ function MagicButton (){
   );
 }
 
-
+function Bookshelf() {
+  <div>
+    <h2>{book.title} ({book.published})</h2>
+    <p>{book.author}</p>
+    {book.image &&
+    <img
+    className="bookCover"
+    src={book.image}
+    alt={book.title + 'cover'}
+    style={{
+      width: book.width,
+      height: book.height
+    }}
+  />
+  }
+  </div>
+  ;
+}
 function App() {
   return (
     <div className="App">
