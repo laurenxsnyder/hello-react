@@ -13,7 +13,7 @@ function ZineRack() {
     <li
       key={zine.id}
       style={{
-        color: zine.isAvailable ? 'red' : 'green'
+        color: zine.isAvailable ? 'green' : 'red'
       }}
       >
         {zine.title}
@@ -63,6 +63,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <ZineRack/>
        <Bookshelf/>
       </header>
     </div>
