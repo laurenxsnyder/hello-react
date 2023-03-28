@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 const magazines = [
-  {id: 1, title: 'Architectural Digest', theme: 'architecture',
+  {id: 1, title: 'The New Yorker', theme: 'general',
   isAvailable: true },
-  {id: 2, title: 'Dwell', theme: 'architecture', isAvailable: true},
-  {id: 3, title: 'Communication Arts', theme: 'design', isAvailable: false},
+  {id: 2, title: 'Vouge', theme: 'fashion', isAvailable: true},
+  {id: 3, title: 'VIM Magazine', theme: 'fashion', isAvailable: false},
 ];
 
 function ZineRack() {
@@ -18,17 +18,17 @@ function ZineRack() {
       >
         {zine.title}
       </li>
-      );
-      return (
-        <ul>{listZines}</ul>
-      )
+    );
+    return (
+      <ul>{listZines}</ul>
+    )
 }
 
 const book = {
-  title: 'A Farewell to Arms',
-  author: 'Earnest Hemingway',
-  published: '1929',
-  image: 'https://upload.wikimedia.org/wikipedia/en/4/48/Hemingway_farewell.png',
+  title: 'Pride and Prejudice',
+  author: 'Jane Austen',
+  published: '1813',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/1/17/PrideAndPrejudiceTitlePage.jpg',
   width: '264',
   height: '378'
 };
@@ -36,8 +36,8 @@ const book = {
 function MagicButton (){
   return (
     <>
-    <h3>This is a magic button</h3>
-    <button>Magic</button>
+    <h3>click for a wish</h3>
+    <button>wish</button>
     </>
   );
 }
@@ -63,8 +63,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ZineRack/>
+      <ZineRack />
        <Bookshelf/>
+       <MagicButton/>
       </header>
     </div>
   );
