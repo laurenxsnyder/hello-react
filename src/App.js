@@ -23,7 +23,7 @@ function Bookshelf() {
   <div>
     <h2>{book.title} ({book.published})</h2>
     <p>{book.author}</p>
-    {book.image &&
+    {book.image}
     <img
     className="bookCover"
     src={book.image}
@@ -33,7 +33,6 @@ function Bookshelf() {
       height: book.height
     }}
   />
-  }
   </div>
   ;
 }
