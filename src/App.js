@@ -8,6 +8,22 @@ const magazines = [
   {id: 3, title: 'Communication Arts', theme: 'design', isAvailable: false},
 ];
 
+function ZineRack() {
+  const listZines = magazines.map(zine =>
+    <li
+      key={zine.id}
+      style={{
+        color: zine.isAvailable ? 'red' : 'green'
+      }}
+      >
+        {zine.title}
+      </li>
+      );
+      return (
+        <ul>{listZines}</ul>
+      )
+}
+
 const book = {
   title: 'A Farewell to Arms',
   author: 'Earnest Hemingway',
