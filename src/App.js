@@ -1,4 +1,5 @@
-//import logo from './logo.svg';
+import{supabase} from'.supabaseClient.js';
+import logo from './logo.svg';
 import './App.css';
 
 const magazines = [
