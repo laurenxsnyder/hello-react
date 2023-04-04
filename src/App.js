@@ -4,27 +4,27 @@ import logo from './logo.svg';
 import './App.css';
 
 function Library() {
-  const [myBooks, setMyBooks] = useState{[]};
+  const [myBooks, setMyBooks] = useState([]);
   async function getBooks() {
     let { data: books, error} = await supabase
     .from('books')
     .select('*')
-    setMyBooks(books);
+  setMyBooks(books);
   }
-  getBooks();
-  return (
+getBooks();
+return (
     <table>
       {
-        myBooks.map(b => {
+        myBooks.map(b => (
           <tr>
             <td>{b.title}</td>
             <td>{b.author}</td>
             <td>{b.ibsn}</td>
           </tr>
-        })
+        ))
       }
     </table>
-  );
+  )
 }
 
 const magazines = [
@@ -95,10 +95,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Library />
-      <ZineRack />
-       <Bookshelf/>
-       <MagicButton/>
+        <Library/>
+        <ZineRack />
+        <Bookshelf/>
+        <MagicButton/>
       </header>
     </div>
   );
