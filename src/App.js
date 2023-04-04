@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { supabase } from './supabaseClient';
 import logo from './logo.svg';
 import './App.css';
@@ -35,10 +36,14 @@ const book = {
 };
 
 function MagicButton (){
+  const [count, setCount] = useState(0);
+  function doMagic() {
+    setCount(count + 1);
+  }
   return (
     <>
-    <h3>click for a wish</h3>
-    <button>wish</button>
+    <h3>This is a magic button</h3>
+    <button onCLick={doMagic}>Magic {count}</button>
     </>
   );
 }
