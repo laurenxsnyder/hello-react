@@ -95,6 +95,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Library />
       <ZineRack />
        <Bookshelf/>
        <MagicButton/>
