@@ -19,7 +19,7 @@ return (
           <tr>
             <td>{b.title}</td>
             <td>{b.author}</td>
-            <td>{b.ibsn}</td>
+            <td>{b.isbn}</td>
           </tr>
         ))
       }
@@ -63,7 +63,7 @@ function MagicButton() {
   );
 }
 
-const book = {
+const books = {
   title: 'Pride and Prejudice',
   author: 'Jane Austen',
   published: '1813',
@@ -77,20 +77,21 @@ const book = {
 function Bookshelf() {
   return (
   <div>
-    <h2>{book.title} ({book.published})</h2>
-    <p>{book.author}</p>
+    <h2>{books.title} ({books.published})</h2>
+    <p>{books.author}</p>
     <img
     className="bookCover"
-    src={book.image}
-    alt={book.title + 'cover'}
+    src={books.image}
+    alt={books.title + 'cover'}
     style={{
-      width: book.width,
-      height: book.height
+      width: books.width,
+      height: books.height
     }}
      />
   </div>
   );
 }
+
 function App() {
   return (
     <div className="App">

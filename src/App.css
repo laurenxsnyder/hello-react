@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+table {
+  width: 100%;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  border: 1px #ddd;
+  background-color: #f2f2f2;
+  color: #444;
+  font-weight: bold;
+}
